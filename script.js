@@ -74,7 +74,7 @@
 //-----------------------------------------------------
 
 // Завдання №9 -> Додаткове
-// let number = prompt("Write a number of your ticket");
+// let number = +prompt("Write a number of your ticket");
 // let coupleNumber;
 // let upperType = "Верхня полиця";
 // let bottomType = "Нижня полиця";
