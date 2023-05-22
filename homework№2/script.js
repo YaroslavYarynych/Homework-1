@@ -44,27 +44,27 @@
 //---------------------------------------------------------
 
 // Завдання №4
-let arr = [4, 5, 2, 1, 6, 5, 3, 5, 2, 5];
-let data = [];
-let frequency = []; //масив для count
-let element;
-for (let i = 0; i < arr.length; i++) {
-  element = arr[i];
-  if (frequency[element]) {
-    frequency[element] += 1;
-  } else {
-    frequency[element] = 1;
-  }
-}
-let max = Math.max(frequency[element]);
+// let arr = [4, 5, 2, 1, 6, 5, 3, 5, 2, 5];
+// let data = [];
+// let frequency = []; //масив для count
+// let element;
+// for (let i = 0; i < arr.length; i++) {
+//   element = arr[i];
+//   if (frequency[element]) {
+//     frequency[element] += 1;
+//   } else {
+//     frequency[element] = 1;
+//   }
+// }
+// let max = Math.max(frequency[element]);
 
-arr = arr.filter(function (value) {
-  let numCount = arr.filter(function (num) {
-    return num === value;
-  }).length;
-  return numCount !== max;
-});
-console.log(arr); // [4, 2, 1, 6, 3, 2]
+// arr = arr.filter(function (value) {
+//   let numCount = arr.filter(function (num) {
+//     return num === value;
+//   }).length;
+//   return numCount !== max;
+// });
+// console.log(arr); // [4, 2, 1, 6, 3, 2]
 // не розумію цього завдання:(
 //---------------------------------------------------------
 
