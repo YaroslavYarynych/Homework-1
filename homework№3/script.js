@@ -44,13 +44,13 @@
 
 // Завдання №4
 // function randArray(a) {
-//   k = [];
+//   array = [];
 //   let min = 1;
 //   let max = 500;
 //   for (let i = 0; i < a; i++) {
-//     k.push(Math.floor(Math.random() * (max - min) + min));
+//     array.push(Math.floor((Math.random() * (max - min)) + min));
 //   }
-//   console.log(k);
+//   console.log(array);
 // }
 // randArray(5);
 // randArray(20);
