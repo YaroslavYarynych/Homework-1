@@ -55,16 +55,15 @@
 //---------------------------------------------------------
 
 // Завдання №4
-// class MonthException {
-//   constructor(name, message) {
-//     this.name = name;
+// new Error("MonthException Incorrect month number");
+
+// class MonthException extends Error {
+//   constructor(message) {
+//     super(message);
+//     this.name = "MonthException";
 //     this.message = message;
 //   }
 // }
-// let mes = new MonthException(
-//   "Number Error",
-//   "MonthException Incorrect month number"
-// );
 // function showMonthName(month) {
 //   let year = {
 //     1: "January",
@@ -94,45 +93,35 @@
 //       return;
 //     }
 //   }
-//   throw mes;
+//   throw new MonthException("MonthException Incorrect month number");
 // }
 // try {
 //   showMonthName(12);
+//   showMonthName(122);
 // } catch (error) {
-//   console.log(`${error.name}\n ${error.message}`);
+//   console.log(`${error.message}`);
 // }
 //---------------------------------------------------------
 
 // Завдання №5
-// Реалізуйте функцію showUser(id), яка приймає параметром користувацьке id
-// і повертає об’єкт, який містить значення переданої id.
-// Також функція викидає помилку у разі якщо введено від’ємне id.
-// Реалізуйте функцію showUsers(ids), яка приймає параметром масив
-// користувацьких айді ids, перевіряє з використанням функції showUser()
-// кожен елемент масиву ids на коректність, в разі виключної ситуації виводить
-// повідомлення про помилку. Функція showUsers(ids) повертає масив об’єктів, де
-// значеннями ключів є коректні елементи ids.
-
-// Приклад роботи програми:
-// showUsers([7, -12, 44, 22]);
-// Error: ID must not be negative: -12
-// [ {id: 7}, {id: 44}, {id: 22} ]
-function showUser(id) {
-  if (id > 0) {
-    return { id };
-  } else {
-    throw new Error("Write correct number");
-  }
-}
-showUser(1);
-function showUsers(ids) {
-  try {
-    for (i of ids) {
-      showUser();
-      console.log(i);
-    }
-  } catch (error) {
-    console.log(error.stack);
-  }
-}
-showUsers([7, 20, 0, 20]);
+// function showUser(id) {
+//   if (id > 0) {
+//     console.log({ id });
+//     return { id };
+//   } else {
+//     throw new Error("Write correct number");
+//   }
+// }
+// function showUsers(ids) {
+//   let arr = [];
+//   try {
+//     for (id of ids) {
+//       showUser(id);
+//       arr.push({ id });
+//     }
+//     console.log(arr);
+//   } catch (error) {
+//     console.log(error.stack);
+//   }
+// }
+// showUsers([7, 20, 2]);
