@@ -37,6 +37,7 @@
 // dv.id = "myDiv";
 // let parag = document.createElement("p");
 // parag.textContent = "First paragraph";
+// document.body.appendChild(mn);
 // mn.appendChild(dv);
 // dv.appendChild(parag);
 //---------------------------------------------------------
@@ -65,19 +66,13 @@
 
 // Завдання №5
 // let allTags = document.querySelectorAll(".circle");
-// let value = [];
-// let paragraph = document.getElementsByTagName("p");
+// let paragraphs = document.getElementsByTagName("p");
 
 // allTags.forEach(function (element) {
-//   value.push(element.getAttribute("data-anim"));
+//   const value = element.getAttribute("data-anim");
+//   element.classList.add(value);
+//   paragraphs.textContent = value;
 // });
-// for (let i = 0; i < value.length; i++) {
-//   allTags[i].classList.add(value[i]);
-// }
-// for (let i = 0; i < value.length; i++) {
-//   paragraph = document.getElementsByTagName("p")[i];
-//   paragraph.textContent = value[i];
-// }
 //---------------------------------------------------------
 
 // Завдання №6
