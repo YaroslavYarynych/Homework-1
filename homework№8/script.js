@@ -14,11 +14,11 @@
 
 // Завдання №2
 // function checkEmail(email) {
-//   const regExp = /^[\w.+-]+@[a-z]+\.([a-z]{2,4})$/;
-//   if (regExp.test(email)) {
-//     console.log(true);
+//   const regExp = /^[\w.%+-]+@\w+\.+\w{1,3}/;
+//   if (regExp.test(email) === true) {
+//     return true;
 //   } else {
-//     console.log(false);
+//     return false;
 //   }
 // }
 // checkEmail("slavik2607.lviv@gmail.com");
@@ -50,6 +50,16 @@
 //   }
 // }
 // validationBankCard();
+// Варіант №2
+// function card(number) {
+//     let regExp = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+//     if (regExp.test(number) === true) {
+//       console.log(true);
+//     } else {
+//       console.log(false);
+//     }
+//   }
+//   card("1234-5678-9012-3456");
 //---------------------------------------------------------
 
 // Завдання №5
