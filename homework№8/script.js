@@ -97,3 +97,30 @@
 // checkLogin("ee1.1ret3");
 // checkLogin("ee1*1ret3");
 // checkLogin("awd1.3..21");
+// function checkLogin(login) {
+//     let regExp = /(^[A-Za-z]+[\w.+-]+)/;
+//     let loginMatch;
+//     let result;
+//     if (regExp.test(login) === true && login.length >= 2 && login.length <= 10) {
+//       const regExpForNumber = /(\d*(\.{0,1})?\d+)/g;
+//       loginMatch = login.match(regExpForNumber);
+//       result = { isValid: true, numbers: [loginMatch] };
+//       console.log(result.isValid);
+//       console.log(result.numbers);
+//     } else if (loginMatch === null) {
+//       let value = result.numbers;
+//       let filteredNumbers = value.filter(function (item) {
+//         item !== null;
+//       });
+//       console.log(filteredNumbers);
+//       result.numbers = filteredNumbers;
+//       console.log(result.isValid);
+//       console.log(result.numbers);
+//     } else {
+//       result = { isValid: false, numbers: [loginMatch] };
+//       console.log(result.isValid);
+//       console.log(result.numbers);
+//     }
+//   }
+
+//   checkLogin("userLogin");
