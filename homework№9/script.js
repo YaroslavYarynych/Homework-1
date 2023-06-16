@@ -1,8 +1,10 @@
 // Завдання №1
-// $(function () {
-//   $("h2.head").css("background-color", "green");
-//   $("*.inner").css("font-size", "35px");
-// });
+$(function () {
+  $("h2.head")
+    .css("background-color", "green")
+    .find("span")
+    .css("font-size", "35px");
+});
 //---------------------------------------------------------
 
 // Завдання №2
