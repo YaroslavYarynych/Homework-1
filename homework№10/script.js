@@ -36,7 +36,7 @@
 // const mul = (...rest) => {
 //   const col = [...rest];
 //   let array = [];
-//   let result;
+//   let result = 1;
 //   col.forEach((element) => {
 //     if (typeof element === "number") {
 //       array.push(element);
@@ -44,8 +44,9 @@
 //       return (result = 0);
 //     }
 //   });
+//   result = 1;
 //   for (let i of array) {
-//     result += i;
+//     result *= i;
 //   }
 //   return result;
 // };
