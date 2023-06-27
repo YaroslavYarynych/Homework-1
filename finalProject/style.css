@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(229, 255, 134);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.header {
+    padding: 20px 0px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.list {
+    display: flex;
+    list-style-type: none;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
+.list-item {
+    font-size: 24px;
+    margin: 0px 15px;
+    font-weight: 500;
+    width: 8rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+.list-item:hover {
+    background-color: rgb(229, 255, 134);
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+@media (max-width: 479.98px) {
+    .list-item {
+        font-size: 16px;
+        margin: 0px 8px;
+    }
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.text {
+    margin-top: 10px;
+    width: 50%;
+    font-size: 24px;
+    text-align: justify;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+.donation {
+    display: inline-block;
+    color: rgb(255, 91, 113);
+    font-weight: 700;
+}
+.donation:hover {
+    color: rgb(255, 0, 34);
+    text-decoration: underline;
+}
+.play {
+    width: 110px;
+    height: 60px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+    border-radius: 35px;
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
+}
+.play:hover {
+    background-color: #fff;
+    border-color: rgb(255, 0, 34);
+}

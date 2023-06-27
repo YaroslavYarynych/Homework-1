@@ -41,7 +41,7 @@
 //     if (typeof element === "number") {
 //       array.push(element);
 //     } else {
-//       return (result = 0);
+//       result = 0;
 //     }
 //   });
 //   result = 1;
