@@ -64,11 +64,11 @@
 //     });
 //   }
 //---------------------------------------------------------
-const delay = (i, time) =>
-  new Promise((resolve) => setTimeout(() => resolve(i), time));
-for (let i = 0; i < delays.length; i++) {
-  let del = delays[i];
-  delay(i, del).then(function (value) {
-    console.log(value);
-  });
-}
+// const delay = (i, time) =>
+//   new Promise((resolve) => setTimeout(() => resolve(i), time));
+// for (let i = 0; i < delays.length; i++) {
+//   let del = delays[i];
+//   delay(i, del).then(function (value) {
+//     console.log(value);
+//   });
+// }
