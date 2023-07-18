@@ -363,3 +363,220 @@
 // getLargestNumbers([-20, -10, 0, 0, 5, -50, -40]) === [5, 0, 0, -10, -20];
 
 //---------------------------------------------------------
+
+// function doubleChar(str) {
+//   let result = "";
+//   for (let i of str) {
+//     result += i + i;
+//   }
+//   return result;
+// }
+// doubleChar("String");
+//---------------------------------------------------------
+
+// function simpleMultiplication(number) {
+//   if (number % 2 === 0) {
+//     return number * 8;
+//   } else {
+//     return number * 9
+//   }
+// }
+// simpleMultiplication(21);
+
+//---------------------------------------------------------
+// function sumStr(a, b) {
+//   let firstA = a === "" ? 0 : parseInt(a);
+//   let secondB = b === "" ? 0 : parseInt(b);
+//   let result = firstA + secondB;
+//   console.log(isNaN(result) ? 0 : result.toString());
+// }
+// sumStr("", "");
+//---------------------------------------------------------
+
+// function feast(beast, dish) {
+//   if (
+//     beast[0] === dish[0] &&
+//     beast[beast.length - 1] === dish[dish.length - 1]
+//   ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// feast("great blue heron", "garlic naan");
+
+//---------------------------------------------------------
+
+// function reverseWords(str) {
+//   let lower = str;
+//   let string = lower.split(" ");
+//   let word = [];
+//   string.map((item) => {
+//     let modified = item.split("").reverse().join("");
+//     word.push(modified);
+//   });
+//   let result = word.toString().replace(/,/g, " ");
+//   return result;
+// }
+// reverseWords("This is an example!");
+
+//---------------------------------------------------------
+
+// function getSum(a, b) {
+//   let result = 0;
+//   if (a < b) {
+//     for (let i = a; i < b + 1; i++) {
+//       result += i;
+//     }
+//   } else {
+//     for (let i = b; i < a + 1; i++) {
+//       result += i;
+//     }
+//   }
+//   return result;
+// }
+// getSum(-1, 2);
+// getSum(1, 0);
+// getSum(1, 2);
+// getSum(0, 1);
+// getSum(1, 1);
+// getSum(-1, 0);
+
+//---------------------------------------------------------
+// function updateLight(current) {
+//   let red = "red";
+//   let yellow = "yellow";
+//   let green = "green";
+//   if (current === red) {
+//     return green;
+//   } else if (current === yellow) {
+//     return red;
+//   } else if (current === green) {
+//     return yellow;
+//   }
+// }
+// updateLight("green");
+
+//---------------------------------------------------------
+
+// function upperLetter(string) {
+//   let str = this.split(" ");
+//   let word = "";
+//   str.map((item, index) => {
+//     let firstL = item.slice(0, 1).toUpperCase();
+//     let restWord = item.slice(1);
+//     word += firstL + restWord;
+//     if (index !== str.length - 1) {
+//       word += " ";
+//     }
+//   });
+//   return word;
+// }
+// upperLetter("How can mirrors be real if our eyes aren`t real");
+
+//---------------------------------------------------------
+
+// function calculateYears(principal, interest, tax, desired) {
+//   if (desired === principal) {
+//     return 0;
+//   }
+//   let moneyCount = principal;
+//   let count;
+//   for (count = 0; moneyCount < desired; count++) {
+//     let firstYear = moneyCount * interest;
+//     let taxedMoney = firstYear * tax;
+//     let clearMoney = firstYear - taxedMoney;
+//     moneyCount += clearMoney;
+//   }
+//   return count;
+// }
+// calculateYears(1000, 0.05, 0.18, 1100);
+
+//---------------------------------------------------------
+
+// function busStop(arr) {
+//   let peopleIn = 0;
+//   let peopleOut = 0;
+//   arr.forEach((element) => {
+//     peopleIn += element[0];
+//     peopleOut += element[1];
+//   });
+//   let result = peopleIn - peopleOut;
+//   return result;
+// }
+
+// busStop([
+//   [10, 0],
+//   [3, 5],
+//   [5, 8],
+// ]);
+
+//---------------------------------------------------------
+
+// function findShort(s) {
+//   let string = s.split(" ");
+//   let array = [];
+//   string.forEach((el) => {
+//     let length = el.length;
+//     array.push(length);
+//   });
+//   array.sort((a, b) => a - b);
+//   let result = array[0];
+//   return result;
+// }
+// findShort("bitcoin take over the world maybe who knows perhaps");
+
+//---------------------------------------------------------
+
+// function descendingOrder(n) {
+//   let str = n.toString();
+//   let num = [];
+//   let splited = str.split("");
+//   for (let i = 0; i < splited.length; i++) {
+//     num.push(parseInt(splited[i]));
+//   }
+//   num.sort((a, b) => b - a);
+//   let result = "";
+//   for (let i = 0; i < num.length; i++) {
+//     result += num[i];
+//   }
+//   return parseInt(result);
+// }
+// descendingOrder(42145);
+
+//---------------------------------------------------------
+
+// function addBinary(a, b) {
+//   let sum = a + b;
+//   let result = sum.toString(2);
+//   return result;
+// }
+// addBinary(1, 1);
+
+//---------------------------------------------------------
+
+// function firstNonConsecutive(arr) {
+//   let result = [];
+//   if (arr.length === 0) {
+//     result.push(null);
+//   } else if (arr.length === 1) {
+//     result.push(arr[0]);
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i === arr.length - 1) {
+//       break;
+//     } else if (arr[i + 1] - arr[i] !== 1) {
+//       result.push(arr[i + 1]);
+//     }
+//   }
+
+//   if (result[0] === undefined) {
+//     result[0] = null;
+//   }
+//   return result[0];
+// }
+// firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]);
+// firstNonConsecutive([1, 2, 3, 4, 5, 6, 7, 8]);
+// firstNonConsecutive([1]);
+
+//---------------------------------------------------------
