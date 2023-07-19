@@ -580,3 +580,91 @@
 // firstNonConsecutive([1]);
 
 //---------------------------------------------------------
+
+// function roundToNext5(n) {
+//   let result = Math.ceil(n / 5) * 5;
+//   if (result === -0) {
+//     result = 0;
+//   }
+//   return result;
+// }
+// roundToNext5(2);
+
+//---------------------------------------------------------
+
+// function powersOfTwo(n) {
+//   let array = [1];
+//   for (let i = 1; i <= n; i++) {
+//     array.push(2 ** i);
+//   }
+//   console.log(array);
+//   return array;
+// }
+// powersOfTwo(0);
+
+//---------------------------------------------------------
+
+// function word(str) {
+//   let regex = /[A-Z]/g;
+//   let indexArr = [];
+//   let value = str.split("").reduce((acc, item, index, array) => {
+//     if (item.match(regex)) {
+//       indexArr.push(index);
+//     }
+//   }, []);
+//   return indexArr;
+// }
+// word("CodEWaRs");
+
+//---------------------------------------------------------
+
+// function printerError(s) {
+//   let regex = /[a-m]/g;
+//   let fullCount = s.length;
+//   let falseCount = 0;
+//   let value = s.split("").reduce((acc, item, index, array) => {
+//     if (item.match(regex)) {
+//       falseCount += 0;
+//     } else {
+//       falseCount += 1;
+//     }
+//   }, []);
+//   let result = `${falseCount} / ${fullCount}`;
+//   return result;
+// }
+// printerError("aaaxbbbbyyhwawiwjjjwwm");
+
+//---------------------------------------------------------
+
+// function gimme(triplet) {
+//   let min = Math.min(...triplet);
+//   let max = Math.max(...triplet);
+//   let result = 0;
+//   for (let i = 0; i < triplet.length; i++) {
+//     if (triplet[i] !== min && triplet[i] !== max) {
+//       result = i;
+//       break;
+//     }
+//   }
+//   return result;
+// }
+
+// gimme([5, 10, 14]);
+// gimme([2.1, 3.2, 1.4]);
+
+//---------------------------------------------------------
+
+// function stray(numbers) {
+//   let result;
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers.indexOf(numbers[i]) === numbers.lastIndexOf(numbers[i])) {
+//       result = numbers[i];
+//       break;
+//     }
+//   }
+//   return result;
+// }
+// stray([17, 17, 3, 17, 17, 17, 17]);
+// stray([1, 1, 2]);
+
+//---------------------------------------------------------
