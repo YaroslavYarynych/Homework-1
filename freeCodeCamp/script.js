@@ -668,3 +668,141 @@
 // stray([1, 1, 2]);
 
 //---------------------------------------------------------
+
+// function disemvowel(str) {
+//   let regex = /[aeiou]/gi;
+//   let result = str.replace(regex, "");
+//   return result;
+// }
+// disemvowel("This website is for losers LOL");
+
+//---------------------------------------------------------
+
+// function uniqueInOrder(iterable) {
+//   let result = [];
+//   if (typeof iterable === "string") {
+//     let splited = iterable.split("").filter((el) => el !== ",");
+//     for (let i = 0; i < splited.length; i++) {
+//       if (splited[i] !== splited[i + 1]) {
+//         result.push(splited[i]);
+//       }
+//     }
+//   } else {
+//     for (let i = 0; i < iterable.length; i++) {
+//       if (iterable[i] !== iterable[i + 1]) {
+//         result.push(iterable[i]);
+//       }
+//     }
+//   }
+//   return result;
+// }
+// uniqueInOrder("AAAABBBCCDAABBB");
+// uniqueInOrder([1, 2, 2, 3, 3]);
+
+//---------------------------------------------------------
+
+// function getAge(inputString) {
+
+//   let array = inputString.split("");
+//   let res = parseInt(array[0]);
+
+//   return res;
+// }
+// getAge("4 years old");
+
+//---------------------------------------------------------
+
+// function between(a, b) {
+//   let array = [];
+//   for (let i = a; i <= b; i++) {
+//     array.push(i);
+//   }
+//   return array;
+// }
+// between(1, 4);
+
+//---------------------------------------------------------
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   let dis = mpg * fuelLeft;
+//   if (dis >= distanceToPump) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+// zeroFuel(100, 50, 1);
+
+//---------------------------------------------------------
+
+// const stringToNumber = function (str) {
+//   let string = parseInt(str);
+//     return string;
+// };
+// stringToNumber("1244");
+
+//---------------------------------------------------------
+
+// function isIsogram(str) {
+//     let splited = str.toLowerCase().split("");
+//     let result = true;
+//     for (let i of splited) {
+//         if (splited.indexOf(i) !== splited.lastIndexOf(i)) {
+//         result = false;
+//         break;
+//         }
+//     }
+//     return result;
+// }
+// isIsogram("Dermatoglyphics");
+
+//---------------------------------------------------------
+
+// let number = function (array) {
+//   let arr = [];
+//   count = 1;
+//   for (let i of array) {
+//     arr.push(`${count++}: ${i}`);
+//   }
+//   return arr;
+// };
+// number(["a", "b", "c"]);
+
+//---------------------------------------------------------
+
+// function findSmallestInt(args) {
+//   let result = args.sort((a, b) => a - b);
+//   return result[0];
+// }
+// findSmallestInt([34, -345, -1, 100]);
+
+//---------------------------------------------------------
+
+// const binaryArrayToNumber = (arr) => {
+//   let result = "";
+//   for (let i of arr) {
+//     result += i;
+//   }
+//   let res = parseInt(result, 2);
+//   return res;
+// };
+// binaryArrayToNumber([0, 0, 1, 0]);
+
+//---------------------------------------------------------
+
+function bouncingBall(h, bounce, window) {
+  let timesSeen = 0;
+  if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
+    do {
+      h *= bounce;
+      timesSeen += 1;
+
+      console.log(h);
+    } while (h > window);
+  } else {
+    console.log(-1);
+  }
+  console.log(timesSeen);
+  return timesSeen;
+}
+bouncingBall(30, 0.66, 1.5);
