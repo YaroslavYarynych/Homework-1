@@ -50,7 +50,7 @@
 // function factorial(n) {
 //   let result = 1;
 //   for (let i = n; i > 0; i--) {
-//     if (n <= 1) {
+//     if (n <=  1) {
 //       return 1;
 //     } else {
 //       result = result * i;
@@ -790,19 +790,77 @@
 
 //---------------------------------------------------------
 
-function bouncingBall(h, bounce, window) {
-  let timesSeen = 0;
-  if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
-    do {
-      h *= bounce;
-      timesSeen += 1;
+// function bouncingBall(h, bounce, window) {
+//   let timesSeen = 0;
+//   if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
+//     while (h > window) {
+//       h *= bounce;
+//       timesSeen += 1;
+//       if (h > window) {
+//         timesSeen += 1;
+//       }
+//     }
+//   } else {
+//     return -1;
+//   }
+//   return timesSeen;
+// }
+// bouncingBall(30, 0.66, 1.5);
 
-      console.log(h);
-    } while (h > window);
-  } else {
-    console.log(-1);
-  }
-  console.log(timesSeen);
-  return timesSeen;
-}
-bouncingBall(30, 0.66, 1.5);
+//---------------------------------------------------------
+
+// function deleteNth(arr, n) {
+//   let array = [];
+//   let result = {};
+//   for (i of arr) {
+//     if (!result[i]) {
+//       result[i] = 1;
+//     } else if (result[i] < n) {
+//       result[i]++;
+//     } else {
+//       continue;
+//     }
+//     array.push(i);
+//   }
+//   return array;
+// }
+
+// deleteNth([20, 37, 20, 21], 1);
+// deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3);
+
+// Другий варіант вирішення
+// function deleteNth(arr, n) {
+//   let obj = {};
+//   let array = arr.filter((el) => {
+//     (obj[el] = obj[el] + 1 || 1) <= n;
+//   });
+//   return array;
+// }
+// deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3);
+
+//---------------------------------------------------------
+
+// function check(a, x) {
+//   let fls = false;
+//   a.forEach((el) => {
+//     if (el === x) {
+//       fls = true;
+//     }
+//   });
+//   return fls;
+// }
+// check([66, 101], 66);
+
+//---------------------------------------------------------
+
+// function palindrom(str) {
+//   let string = str.split("").reverse().join("");
+//   if (str === string) {
+//     return string;
+//   } else {
+//     return "it is not a palindrom";
+//   }
+// }
+// console.log(palindrom("rotator"));
+
+//---------------------------------------------------------
