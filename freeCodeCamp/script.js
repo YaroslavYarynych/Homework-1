@@ -864,3 +864,48 @@
 // console.log(palindrom("rotator"));
 
 //---------------------------------------------------------
+
+// function wave(str) {
+//   let array = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== " ") {
+//       let sliced = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
+//       array.push(sliced);
+//     }
+//   }
+//   return array;
+// }
+// wave("hello");
+
+//---------------------------------------------------------
+
+// function solution(string) {
+//   let regex = /[A-Z]/g;
+//   let result = "";
+//   for (let i = 0; i < string.length; i++) {
+//     if (regex.test(string[i]) !== true) {
+//       result += string[i];
+//     } else {
+//       result += " " + string[i];
+//     }
+//   }
+//   return result;
+// }
+// solution("camelCasing");
+// solution("identifier");
+// solution("");
+
+//---------------------------------------------------------
+
+// function SeriesSum(n) {
+//   let result = 0;
+//   if (n === 0 || n === 1) {
+//     console.log(n.toFixed(2));
+//   }
+//   for (let i = 0; i < n; i++) {
+//     result += 1 / (1 + i * 3);
+//   }
+//   return result;
+// }
+
+// SeriesSum(2);
