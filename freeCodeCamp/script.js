@@ -907,5 +907,25 @@
 //   }
 //   return result;
 // }
-
 // SeriesSum(2);
+
+//---------------------------------------------------------
+
+// function removeSmallest(numbers) {
+//   let array = [...numbers];
+//   if (array.length === 0) {
+//     return array;
+//   }
+//   let min = Math.min(...array);
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === min) {
+//       array.splice(i, 1);
+//       break;
+//     }
+//   }
+//   return array;
+// }
+// removeSmallest([1, 2, 3, 4, 5]);
+// removeSmallest([2, 2, 1, 2, 1]);
+
+//---------------------------------------------------------
