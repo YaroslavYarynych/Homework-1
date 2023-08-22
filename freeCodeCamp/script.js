@@ -929,3 +929,123 @@
 // removeSmallest([2, 2, 1, 2, 1]);
 
 //---------------------------------------------------------
+
+// function countNetworking(quarantineLength, frequency) {
+//   let party = 0;
+//   for (let i = 0; i < 12; i++) {
+//     if (
+//       i >= quarantineLength &&
+//       i % frequency === quarantineLength % frequency
+//     ) {
+//       party++;
+//     }
+//   }
+//   console.log(party);
+// }
+// countNetworking(3, 4);
+
+//---------------------------------------------------------
+
+// function makeDecision(fuelRemaining, distance, fuelConsumption) {
+//   const fuel = (distance / 100) * fuelConsumption;
+//   console.log(fuel);
+//   if (fuelConsumption <= 0 || distance <= 0) {
+//     return "please, enter the valid data";
+//   } else if (fuel <= fuelRemaining && fuelRemaining > 0) {
+//     return "reach gas station by themselves";
+//   } else {
+//     return "ask for help";
+//   }
+// }
+// makeDecision(5, 50, 10);
+
+//---------------------------------------------------------
+
+// function getYears(amount, percent, limit) {
+//   if (amount === limit) {
+//     return 0;
+//   }
+
+//   let moneyCount = amount;
+//   let count;
+
+//   for (count = 0; moneyCount < limit; count++) {
+//     let firstYear = (moneyCount * percent) / 100;
+//     moneyCount += firstYear;
+//     if (moneyCount > limit) {
+//       count = count - 1;
+//     }
+//   }
+
+//   return count;
+// }
+
+// getYears(20000, 10, 21000);
+// getYears(1600, 10, 2000);
+
+//---------------------------------------------------------
+
+// function calculateGuests(guestsInput) {
+//   let value = "";
+//   const regex = /\d+/;
+//   let check = false;
+
+//   for (const i of guestsInput) {
+//     if (regex.test(i)) {
+//       value += i;
+//       console.log(value);
+//       check = true;
+//     } else if (check) {
+//       break;
+//     }
+//   }
+//   if (!value) {
+//     return "not a number";
+//   }
+
+//   if (isNaN(value) || value === "0") {
+//     return "not a number";
+//   }
+
+//   return Number(value);
+// }
+// console.log(calculateGuests("There will be 7 or 9 guys"));
+
+//---------------------------------------------------------
+
+// function isAlphabet(letters) {
+//   const alphabetString = "abcdefghijklmnopqrstuvwxyz";
+//   let str = "";
+
+//   for (const i of letters) {
+//     str += i.toLocaleLowerCase();
+//   }
+//   const result = alphabetString.localeCompare(str);
+
+//   if (result === 1) {
+//     console.log(true);
+//   } else {
+//     return false;
+//   }
+// }
+// isAlphabet("abc");
+
+//---------------------------------------------------------
+
+// function getName(count) {
+//   switch (count) {
+//     case 1:
+//       return "One";
+//     case 2:
+//       return "A few";
+//     case 3:
+//       return "A few";
+//     case 4:
+//       return "A few";
+//     default:
+//       return "Many";
+//   }
+// }
+// console.log(getName(10));
+
+//---------------------------------------------------------
