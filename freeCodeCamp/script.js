@@ -1049,3 +1049,146 @@
 // console.log(getName(10));
 
 //---------------------------------------------------------
+
+// function restoreNames(users) {
+//   for (const value of users) {
+//     for (const i in value) {
+//       if (value[i] === undefined) {
+//         const name = value.fullName.split(' ');
+//         value[i] = name[0];
+//       }
+//     }
+//   }
+// }
+// const users = [
+//   {
+//     firstName: undefined,
+//     lastName: "Holy",
+//     fullName: "Jack Holy",
+//   },
+//   {
+//     lastName: "Adams",
+//     fullName: "Mike Adams",
+//   },
+// ];
+// restoreNames(users);
+
+//---------------------------------------------------------
+
+// function removeFemaleAges(people) {
+//   for (const obj of people) {
+//     for (const value in obj) {
+//       if (obj[value] === "female") {
+//         delete obj.age;
+//       }
+//     }
+//   }
+// }
+// const people = [
+//   { name: "Emma", gender: "female", age: 40 },
+//   { name: "Avram", gender: "male", age: 41 },
+// ];
+// removeFemaleAges(people);
+
+//---------------------------------------------------------
+
+// function getOutdated(robots, newVersion) {
+//   const array = [];
+//   const result = [];
+//   for (let obj of robots) {
+//     for (let value in obj) {
+//       if (obj[value]) {
+//         array.push(obj[value]);
+//       }
+//     }
+//   }
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] < newVersion) {
+//       result.push(i);
+//     }
+//   }
+//   return result
+// }
+// const robots = [
+//   { coreVersion: 9 },
+//   { coreVersion: 13 },
+//   { coreVersion: 16 },
+//   { coreVersion: 9 },
+//   { coreVersion: 14 },
+// ];
+// getOutdated(robots, 10);
+
+//---------------------------------------------------------
+
+// function countBoxes(boxes) {
+//   const arr = boxes.split("");
+//   const count = arr.reduce((ac, prev) => {
+//     if (!ac[prev]) {
+//       ac[prev] = 1;
+//     } else {
+//       ac[prev] = ac[prev] + 1;
+//     }
+//     return ac;
+//   }, {});
+// }
+
+// countBoxes("aabca");
+
+//---------------------------------------------------------
+
+// function getRobotSchema(robot) {
+//   for (let i in robot) {
+//     robot[i] = typeof robot[i];
+//   }
+//   return robot
+// }
+// const robot = {
+//   version: 16,
+//   name: "Cleaner 3000",
+//   released: true,
+//   author: { name: "Vlad" },
+// };
+// getRobotSchema(robot);
+
+//---------------------------------------------------------
+
+// const compareRobots = (robot1, robot2) => {
+//   const { serialNo: _, ...rest1 } = robot1;
+//   const { serialNo: __, ...rest2 } = robot2;
+
+//   return JSON.stringify(rest1) === JSON.stringify(rest2);
+// };
+
+//---------------------------------------------------------
+
+// const compareRobots = (robot1, robot2) => {
+//   if (Object.keys(robot1).length !== Object.keys(robot2).length) {
+//     return false;
+//   }
+//   for (let i in robot1) {
+//     if (i === "serialNo") {
+//       continue;
+//     }
+
+//     if (robot1[i] !== robot2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// const charlie = { serialNo: 1, chipVer: 12 };
+
+// const lordy = { serialNo: 2, chipVer: 12 };
+// console.log(compareRobots(charlie, lordy)); // true);
+// const paul = { serialNo: 3, chipVer: 15 };
+// console.log(compareRobots(paul, charlie)); // false
+
+// const mike = { serialNo: 4, chipVer: 12, wheels: 1 };
+// compareRobots(mike, charlie); // false
+
+// const max = { serialNo: 5, engineVer: 12 };
+// compareRobots(max, charlie); // false
+
+// const steve = { serialNo: 6 };
+// compareRobots(steve, charlie); // false
