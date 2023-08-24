@@ -1192,3 +1192,222 @@
 
 // const steve = { serialNo: 6 };
 // compareRobots(steve, charlie); // false
+
+//---------------------------------------------------------
+
+// function isAlphabet(letters) {
+//   if (letters.length <= 0) {
+//     return false;
+//   }
+
+//   const alf = letters.toLowerCase();
+//   const alphabetString = "abcdefghijklmnopqrstuvwxyz";
+//   const alfabetstr = alphabetString.includes(alf);
+//   console.log(alfabetstr);
+//   if (alfabetstr) {
+//     return true;
+//   }
+
+//   return false;
+// }
+
+// isAlphabet("a");
+// isAlphabet("");
+
+//---------------------------------------------------------
+
+// function countNetworking(quarantineLength, frequency) {
+//   let party = 0;
+//   const year = 12;
+//   const x = Math.floor((year - quarantineLength) / frequency);
+//   console.log(x);
+//   if ((x + 1) % frequency > 0 && quarantineLength !== 0) {
+//     party = x + 1;
+//   } else {
+//     party = x;
+//   }
+
+//   return party;
+// }
+// countNetworking(3, 1);
+// countNetworking(3, 2) === 5 // місяці 4, 6, 8, 10 и 12
+// countNetworking(12, 1) === 0 // карантин на весь рік
+// countNetworking(11, 3) === 1 // в останній місяць року
+// countNetworking (2, 5) === 2 // місяці 3 та 8
+// countNetworking (3, 4) === 3 // місяці 4, 8 та 12
+
+//---------------------------------------------------------
+
+// function colorStones(stones) {
+//   let arr = stones.split("");
+//   stones = arr
+//     .filter((value, index, self) => {
+//       return self.indexOf(value) === index;
+//     })
+//     .join("");
+//   console.log(stones);
+// }
+
+// colorStones("RRRRGB");
+
+//---------------------------------------------------------
+
+// function colorStones(stones) {
+//   let array = [...stones];
+//   let rgb = ["R", "G", "B"];
+//   let count = array.length;
+//   let i = 0;
+//   for (let j = 0; j < array.length; j++) {
+//     if (i === 3) {
+//       i = 0;
+//     }
+//     if (array[j] === rgb[i]) {
+//       count--;
+//       i++;
+//     }
+//   }
+//   return count;
+// }
+// colorStones("RRRRGGGGBBBB");
+
+//---------------------------------------------------------
+
+// function countNextSmaller(numbers) {
+//   const array = [];
+//   for (const i = 0; i < numbers.length; i++) {
+//     let count = 0;
+//     for (const j = i + 1; j < numbers.length; j++) {
+//       if (numbers[i] > numbers[j]) {
+//         count++;
+//       }
+//     }
+//     array.push(count);
+//   }
+//   return array;
+// }
+// countNextSmaller([5, 4, 3, 2, 1]);
+//  === [4, 3, 2, 1, 0]
+
+//---------------------------------------------------------
+
+// function getProductId(url) {
+//   let regex = /\d+/g;
+//   let value = url.match(regex);
+//   let str = value[0].split("");
+//   let result = "";
+
+//   for (let i of str) {
+//     if (i !== "-") {
+//       result += i;
+//     }
+//   }
+//   console.log(result);
+//   return result;
+// }
+// getProductId("exampleshop.com/fancy-coffee  -cup-p-90764-12052019.html");
+
+//---------------------------------------------------------
+
+// function getProductId(url) {
+//   const tr = url.lastIndexOf("p-");
+//   const tr2 = url.lastIndexOf("-");
+//   const sbstr = url.substring(tr + 2, tr2);
+//   return sbstr;
+// }
+// getProductId("exampleshop.com/fancy-coffee  -cup-p-90764-12052019.html");
+
+//---------------------------------------------------------
+
+// function getLeaders(numbers) {
+//   for (let i = 0; i < numbers.length; i++) {
+//     let sum = 0;
+
+//     for (let j = i + 1; j < numbers.length; j++) {
+//       sum += numbers[j];
+//     }
+
+//     if (numbers[i] > sum) {
+//       array.push(numbers[i]);
+//     }
+//   }
+
+//   return array;
+// }
+// getLeaders([1, 2, 3, 4, 0]); // [4]
+
+// 4 is greater than the sum all the elements to its right side
+// The last element 0 is equal to right sum of its elements (abstract zero).
+
+//---------------------------------------------------------
+
+// function getArrayProduct(numbers) {
+//   if (numbers.length <= 0) {
+//     return numbers;
+//   }
+//   let prev = numbers[0];
+//   numbers[0] *= numbers[1];
+//   for (let i = 1; i < numbers.length - 1; i++) {
+//     let curr = numbers[i];
+//     numbers[i] = prev * numbers[i + 1];
+//     prev = curr;
+//   }
+//   numbers[numbers.length - 1] = prev * numbers[numbers.length - 2];
+// }
+
+// getArrayProduct([1, 5, 2]);
+// НЕ ВИРІШЕНО
+
+//---------------------------------------------------------
+
+// function getRowWeights(people) {
+//   let sum = 0;
+//   let sum2 = 0;
+//   for (let i = 0; i < people.length; i++) {
+//     if (i % 2 === 0) {
+//       sum += people[i];
+//     } else {
+//       sum2 += people[i];
+//     }
+//   }
+//   let array = [sum, sum2];
+//   return array;
+// }
+// getRowWeights([10, 85, 90]);
+
+//---------------------------------------------------------
+
+// function countLettersInString(str) {
+//   const arr = str.split("");
+
+//   const count = arr.reduce((ac, prev) => {
+//     if (!ac[prev]) {
+//       ac[prev] = 1;
+//     } else {
+//       ac[prev] += 1;
+//     }
+
+//     return ac;
+//   }, {});
+//   return count;
+// }
+
+// console.log(countLettersInString("arithmetics"));
+
+//---------------------------------------------------------
+
+function addNumbers(object) {
+  let sum = 0;
+  for (let i in object) {
+    if (typeof object[i] === "number") {
+      sum += object[i];
+    }
+  }
+  return sum;
+}
+const object = {
+  one: 1,
+  two: "2",
+  three: 3,
+};
+
+addNumbers(object);
